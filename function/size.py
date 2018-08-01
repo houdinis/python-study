@@ -18,3 +18,16 @@ def size(*args):
                 min = i
 
     return max,min
+
+
+#优化后
+
+import random
+
+def double_values(*nums):
+    print(nums)
+    return max(nums),min(nums)
+
+
+
+print(*double_values(*[random.randint(10,20) for _ in range(10)]))

@@ -16,3 +16,34 @@ def triangle(n):
         print('\n')
 
 triangle(12)
+
+
+
+
+#优化后
+
+def show(n):
+
+    tail = ' '.join([str(col) for col in range(n,0,-1)])
+    size = len(tail)
+
+    for col in range(1,n):
+        print('{:>{}}'.format(' '.join([str(i) for i in range(col,0,-1)]),size))
+
+    print(tail)
+
+
+show(12)
+
+
+
+def tangle(n):
+
+    tail = ' '.join([str(i) for i in range(n,0,-1)])
+    print(tail)
+
+    for i in range(len(tail)):
+        if tail[i] == ' ':
+            print(' '*i,tail[i+1:])
+
+tangle(12)
